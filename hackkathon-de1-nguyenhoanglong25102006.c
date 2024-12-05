@@ -12,11 +12,11 @@ int main  (){
     printf ("8.Cho người dùng nhập vào một phần tử, tìm kiếm xem phần tử đó có tồn tại trong mảng hay không (Binary search)");
     printf ("9.In ra toàn bộ số nguyên tố trong mảng đã được bình phương.");
     printf ("10.Sắp xếp mảng theo thứ tự giảm dần");
-    while (){
+    while (1){
         printf ("Moi chon menu ");
         scanf ("%d",&n);
         if (n > 0 && n < 11) {
-            switch (n);
+            switch (n){
             case 1 :
             printf ("moi nhap so phan tu cua mang ");
             scanf ("%d",m);
@@ -24,8 +24,11 @@ int main  (){
             for ( int i = 0 ; i < m ; i++){
                 scanf ("%d",&arr[m]);
             }
-
-            break ;
+for (int i = 0 ; i < m ; i++){
+                if (arr[i] >= 0){
+                printf ("%d",arr[i]);
+                }
+            }            break ;
             case 2 :
             for ( int i = 0 ; i < m ; i++){
                 printf ("phan tu arr[%d] = %d \n",i, arr[i]);
@@ -57,7 +60,11 @@ int main  (){
             printf ("moi nhap phan tu can them vao ");
             scanf ("%d",&c);
             arr[m] = c ;
-            break ;
+                for (int i = 0 ; i < m ; i++){
+                if (arr[i] >= 0){
+                printf ("%d",arr[i]);
+                }
+            }            break ;
             case 6 :
             int index ;
             printf ("moi nguoi dung nhap vao vi tri can xoa ");
@@ -66,8 +73,13 @@ int main  (){
                 arr[i] = arr[i+1];
 
             }
-            break ;
+                for (int i = 0 ; i < m ; i++){
+                if (arr[i] >= 0){
+                printf ("%d",arr[i]);
+                }
+            }            break ;
             case 7 :
+                int k ;
             int arrSize = sizeof(arr)/sizeof(int);
             for ( int i = 0 ; i < arrSize ; i++){
                 for ( int j  = 0 ; j < arrSize-1-i ; j++){
@@ -102,7 +114,7 @@ int main  (){
                 }
             }
             break ;
-        
+        }
             
 
 
